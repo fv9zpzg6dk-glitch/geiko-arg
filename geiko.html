@@ -145,23 +145,10 @@ button {
 <h2>資料一覧</h2>
 
 
+
 <!-- ==================== -->
 <!-- 31523 春乃 -->
 <!-- ==================== -->
-
-<div class="record">
-
-<h3>資料31523　春乃</h3>
-
-<div class="info">
-
-氏名：春乃<br>
-年齢：20<br>
-所属：○○置屋<br>
-最終確認：昭和十二年五月十三日
-    
-</div>
-
 
 <div class="record">
 
@@ -190,13 +177,18 @@ button {
 
 <strong>関連記録</strong><br><br>
 
-<a href="https://note.com/preview/n6e96b7b66852?prev_access_key=f07ad1ec3e239e4154bb88128e1ccef6" target="_blank">
+<a
+href="https://note.com/preview/n6e96b7b66852?prev_access_key=f07ad1ec3e239e4154bb88128e1ccef6"
+target="_blank"
+rel="noopener noreferrer"
+>
 春乃の記録
 </a>
 
 </div>
 
 </div>
+
 
 
 <!-- ==================== -->
@@ -378,19 +370,18 @@ button {
 その人物の名前を入力してください。<br><br>
 
 <input
-    type="text"
-    id="answer"
-    placeholder="名前を入力"
+type="text"
+id="answer"
+placeholder="名前を入力"
 >
 
 <button onclick="checkAnswer()">
 確認
 </button>
 
-
 <div
-    class="error"
-    id="error">
+class="error"
+id="error">
 </div>
 
 </div>
@@ -500,6 +491,7 @@ button {
 </div>
 
 
+
 <!-- 知識問題 -->
 
 <div class="related">
@@ -516,9 +508,9 @@ button {
 
 
 <input
-    type="text"
-    id="kanzashiAnswer"
-    placeholder="答えを入力"
+type="text"
+id="kanzashiAnswer"
+placeholder="答えを入力"
 >
 
 <button onclick="checkKanzashi()">
@@ -527,8 +519,8 @@ button {
 
 
 <div
-    class="error"
-    id="kanzashiError">
+class="error"
+id="kanzashiError">
 </div>
 
 </div>
@@ -679,8 +671,8 @@ button {
 <!-- ==================== -->
 
 <div
-    class="notice"
-    id="notice">
+class="notice"
+id="notice">
 
 現在確認されている資料のみ表示しています。
 
@@ -699,10 +691,10 @@ button {
 ========================================= */
 
 const params =
-    new URLSearchParams(window.location.search);
+new URLSearchParams(window.location.search);
 
 const watched =
-    params.get("watched");
+params.get("watched");
 
 
 
@@ -713,15 +705,15 @@ const watched =
 if (watched === "1") {
 
     document
-        .getElementById("record31525")
-        .classList
-        .remove("hidden");
+    .getElementById("record31525")
+    .classList
+    .remove("hidden");
 
 
     document
-        .getElementById("notice")
-        .textContent =
-        "追加資料が確認されました。資料31525を表示しています。";
+    .getElementById("notice")
+    .textContent =
+    "追加資料が確認されました。資料31525を表示しています。";
 
 }
 
@@ -734,9 +726,9 @@ if (watched === "1") {
 function showRecord31526() {
 
     document
-        .getElementById("record31526")
-        .classList
-        .remove("hidden");
+    .getElementById("record31526")
+    .classList
+    .remove("hidden");
 
 }
 
@@ -749,9 +741,9 @@ function showRecord31526() {
 function showRecord31527() {
 
     document
-        .getElementById("record31527")
-        .classList
-        .remove("hidden");
+    .getElementById("record31527")
+    .classList
+    .remove("hidden");
 
 }
 
@@ -764,37 +756,37 @@ function showRecord31527() {
 function checkAnswer() {
 
     const answer =
-        document
-        .getElementById("answer")
-        .value
-        .trim();
+    document
+    .getElementById("answer")
+    .value
+    .trim();
 
 
     if (answer === "春乃") {
 
         document
-            .getElementById("record31528")
-            .classList
-            .remove("hidden");
+        .getElementById("record31528")
+        .classList
+        .remove("hidden");
 
 
         document
-            .getElementById("error")
-            .textContent = "";
+        .getElementById("error")
+        .textContent = "";
 
 
         document
-            .getElementById("notice")
-            .textContent =
-            "資料31528が確認されました。";
+        .getElementById("notice")
+        .textContent =
+        "資料31528が確認されました。";
 
 
     } else {
 
         document
-            .getElementById("error")
-            .textContent =
-            "記録と一致しません。資料をもう一度確認してください。";
+        .getElementById("error")
+        .textContent =
+        "記録と一致しません。資料をもう一度確認してください。";
 
     }
 
@@ -809,10 +801,10 @@ function checkAnswer() {
 function checkKanzashi() {
 
     const answer =
-        document
-        .getElementById("kanzashiAnswer")
-        .value
-        .trim();
+    document
+    .getElementById("kanzashiAnswer")
+    .value
+    .trim();
 
 
     if (
@@ -823,28 +815,28 @@ function checkKanzashi() {
 
 
         document
-            .getElementById("record31530")
-            .classList
-            .remove("hidden");
+        .getElementById("record31530")
+        .classList
+        .remove("hidden");
 
 
         document
-            .getElementById("kanzashiError")
-            .textContent = "";
+        .getElementById("kanzashiError")
+        .textContent = "";
 
 
         document
-            .getElementById("notice")
-            .textContent =
-            "資料31530が確認されました。";
+        .getElementById("notice")
+        .textContent =
+        "資料31530が確認されました。";
 
 
     } else {
 
         document
-            .getElementById("kanzashiError")
-            .textContent =
-            "記録と一致しません。";
+        .getElementById("kanzashiError")
+        .textContent =
+        "記録と一致しません。";
 
     }
 
@@ -859,15 +851,15 @@ function checkKanzashi() {
 function showFinal() {
 
     document
-        .getElementById("finalRecord")
-        .classList
-        .remove("hidden");
+    .getElementById("finalRecord")
+    .classList
+    .remove("hidden");
 
 
     document
-        .getElementById("notice")
-        .textContent =
-        "資料31531が確認されました。";
+    .getElementById("notice")
+    .textContent =
+    "資料31531が確認されました。";
 
 }
 
