@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>古写真検索室</title>
+
+<style>
+
+body {
+    margin: 0;
+    background: #e9e5dc;
+    color: #292724;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+header {
+    border-bottom: 3px double #555;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 0.15em;
+    margin: 0;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #666;
+}
+
+.search-box {
+    background: #f7f4ed;
+    border: 1px solid #bbb;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+input {
+    width: calc(100% - 120px);
+    padding: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+button {
+    width: 100px;
+    padding: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.result {
+    display: none;
+    background: #f9f7f1;
+    border: 1px solid #aaa;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.result h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.info {
+    line-height: 2;
+}
+
+.material {
+    margin-top: 20px;
+    border-top: 1px solid #aaa;
+    padding-top: 15px;
+}
+
+.material-number {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.form-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: 1px solid #777;
+    background: #eee9df;
+    color: #292724;
+    text-decoration: none;
+}
+
+.error {
+    display: none;
+    margin-top: 20px;
+    color: #555;
+}
+
+.note {
+    color: #777;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<header>
+
+<h1>古写真検索室</h1>
+
+<div class="subtitle">
+昭和期の古写真・関連資料を検索しています。
+</div>
+
+</header>
+
+
+<div class="search-box">
+
+<p>
+資料に関するキーワードを入力してください。
+</p>
+
+<input
+    type="text"
+    id="keyword"
+    placeholder="例：古い建物"
+>
+
+<button onclick="search()">
+検索
+</button>
+
+<div class="note">
+※現在公開されている資料のみ検索できます。
+</div>
+
+</div>
+
+
+<!-- 検索結果 -->
+
+<div
+    class="result"
+    id="result"
+>
+
+<h2>
+○○町旧花街・三つ巴紋
+</h2>
+
+
+<div class="info">
+
+昭和初期、○○町の花街で確認された
+三つ巴紋に関する資料。
+
+<br>
+
+使用場所：○○置屋
+
+<br>
+
+確認年代：昭和十二年頃
+
+<br>
+
+関連する写真資料：1件
+
+
+<div class="material">
+
+資料番号：
+
+<div class="material-number">
+31524
+</div>
+
+<br>
+
+写真資料に関連する記録が確認されています。
+
+<br>
+
+<a
+    class="form-link"
+    href="https://docs.google.com/forms/d/e/1FAIpQLSdSlOvH68bStW5r1BYDgAK9MCTOKA0s3BWR9MXYypx1RAdwkw/viewform"
+>
+資料31524を確認する
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div
+    class="error"
+    id="error"
+>
+
+該当する資料は見つかりませんでした。
+
+</div>
+
+
+</div>
+
+
+<script>
+
+function search() {
+
+    const keyword =
+        document.getElementById("keyword")
+        .value
+        .trim();
+
+    const result =
+        document.getElementById("result");
+
+    const error =
+        document.getElementById("error");
+
+
+    result.style.display = "none";
+    error.style.display = "none";
+
+
+    /*
+    正解は「三つ巴」
+    */
+
+    if (keyword === "三つ巴") {
+
+        result.style.display = "block";
+
+    } else {
+
+        error.style.display = "block";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
