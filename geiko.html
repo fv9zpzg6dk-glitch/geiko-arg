@@ -64,6 +64,12 @@ h2 {
     padding-top: 15px;
 }
 
+.related a {
+    color: #444;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .hidden {
     display: none;
 }
@@ -84,12 +90,15 @@ h2 {
 
 <header>
     <h1>芸妓資料保存室</h1>
+
     <div class="subtitle">
         昭和期の芸妓に関する記録を整理・保存しています。
     </div>
 </header>
 
+
 <h2>資料一覧</h2>
+
 
 <!-- 資料31523 -->
 <div class="record">
@@ -97,13 +106,12 @@ h2 {
 
     <div class="info">
         氏名：春乃<br>
-        年齢：記録なし<br>
-        所属：大地置屋<br>
-        記録確認：昭和十二年五月十一日
-        備考：ある日の日記が残されている
-        　　　https://note.com/preview/n6e96b7b66852?prev_access_key=f07ad1ec3e239e4154bb88128e1ccef6
+        年齢：20<br>
+        所属：○○置屋<br>
+        最終確認：昭和十二年五月十三日
     </div>
 </div>
+
 
 <!-- 資料31524 -->
 <div class="record">
@@ -114,6 +122,7 @@ h2 {
     </div>
 </div>
 
+
 <!-- 資料31525 -->
 <div class="record">
     <h3>資料31525　千代菊</h3>
@@ -121,10 +130,11 @@ h2 {
     <div class="info">
         氏名：千代菊<br>
         年齢：21<br>
-        所属：大地置屋<br>
+        所属：○○置屋<br>
         記録確認：昭和十二年五月十三日
     </div>
 </div>
+
 
 <!-- 資料31526 -->
 <div class="record hidden" id="record31526">
@@ -134,7 +144,7 @@ h2 {
     <div class="info">
         氏名：雪乃<br>
         年齢：19<br>
-        所属：大地置屋<br>
+        所属：○○置屋<br>
         初回記録：昭和十二年五月十二日<br>
         備考：本人確認済み。
     </div>
@@ -150,13 +160,46 @@ h2 {
         「以前の使用者の名前を記録しないよう本人から申し出あり。」
     </div>
 
+    <!-- 31527を開くリンク -->
+    <div class="related">
+        <strong>関連資料</strong><br><br>
+
+        <a href="#" onclick="showRecord31527(); return false;">
+            資料31527　五月十三日 夜間記録
+        </a>
+    </div>
+
 </div>
+
+
+<!-- 資料31527 -->
+<div class="record hidden" id="record31527">
+
+    <h3>資料31527　五月十三日 夜間記録</h3>
+
+    <div class="info">
+        昭和十二年五月十三日<br><br>
+
+        夜間、○○置屋付近にて人影を確認。<br>
+        詳細については記録なし。
+    </div>
+
+    <div class="related">
+        <strong>備考</strong><br><br>
+
+        関係者への聞き取りを行ったが、<br>
+        内容に食い違いあり。
+    </div>
+
+</div>
+
 
 <div class="notice" id="notice">
     現在確認されている資料のみ表示しています。
 </div>
 
 </div>
+
 
 <script>
 
@@ -169,6 +212,13 @@ if (watched === "1") {
 
     document.getElementById("notice").textContent =
         "追加資料が確認されました。資料31526を表示しています。";
+}
+
+
+function showRecord31527() {
+
+    document.getElementById("record31527").classList.remove("hidden");
+
 }
 
 </script>
