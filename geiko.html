@@ -7,7 +7,6 @@
 <title>芸妓資料保存室</title>
 
 <style>
-
 body {
     margin: 0;
     background: #eeeae2;
@@ -112,6 +111,17 @@ button {
     letter-spacing: .1em;
 }
 
+.warning {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #777;
+    background: #e9e5dc;
+    text-align: center;
+}
+
+.warning strong {
+    font-size: 20px;
+}
 </style>
 </head>
 
@@ -135,9 +145,9 @@ button {
 <h2>資料一覧</h2>
 
 
-<!-- ================================= -->
-<!-- 資料31523　春乃 -->
-<!-- ================================= -->
+<!-- ==================== -->
+<!-- 31523 春乃 -->
+<!-- ==================== -->
 
 <div class="record">
 
@@ -152,6 +162,7 @@ button {
 
 </div>
 
+
 <div class="related">
 
 <strong>写真記録</strong><br><br>
@@ -164,9 +175,9 @@ button {
 
 
 
-<!-- ================================= -->
-<!-- 資料31524　千代菊 -->
-<!-- ================================= -->
+<!-- ==================== -->
+<!-- 31524 千代菊 -->
+<!-- ==================== -->
 
 <div class="record">
 
@@ -185,9 +196,9 @@ button {
 
 
 
-<!-- ================================= -->
-<!-- 資料31525　雪乃 -->
-<!-- ================================= -->
+<!-- ==================== -->
+<!-- 31525 雪乃 -->
+<!-- ==================== -->
 
 <div class="record hidden" id="record31525">
 
@@ -211,6 +222,7 @@ button {
 昭和十二年五月十二日<br>
 
 雪乃へ衣装一式を貸与。<br>
+
 銀細工の髪飾り一点。<br><br>
 
 備考：<br>
@@ -236,9 +248,9 @@ button {
 
 
 
-<!-- ================================= -->
-<!-- 資料31526　夜間記録 -->
-<!-- ================================= -->
+<!-- ==================== -->
+<!-- 31526 夜間記録 -->
+<!-- ==================== -->
 
 <div class="record hidden" id="record31526">
 
@@ -253,6 +265,7 @@ button {
 ○○置屋付近にて人影を確認。<br><br>
 
 二人いたように見えたが、<br>
+
 暗く、顔までは確認できず。
 
 </div>
@@ -272,6 +285,7 @@ button {
 <strong>追記</strong><br><br>
 
 この記録について、翌日になって<br>
+
 一部を書き直すよう指示があった。<br><br>
 
 元の記録は残されていない。
@@ -295,9 +309,9 @@ button {
 
 
 
-<!-- ================================= -->
-<!-- 資料31527　記録訂正 -->
-<!-- ================================= -->
+<!-- ==================== -->
+<!-- 31527 記録訂正 -->
+<!-- ==================== -->
 
 <div class="record hidden" id="record31527">
 
@@ -327,6 +341,7 @@ button {
 ただし、当日の記録によれば、<br>
 
 その人物は五月十三日の夜に<br>
+
 置屋にいたことになっている。
 
 </div>
@@ -338,32 +353,31 @@ button {
 
 その人物の名前を入力してください。<br><br>
 
-
 <input
-type="text"
-id="answer"
-placeholder="名前を入力"
+    type="text"
+    id="answer"
+    placeholder="名前を入力"
 >
 
-
 <button onclick="checkAnswer()">
-
 確認
-
 </button>
 
 
-<div class="error" id="error"></div>
-
+<div
+    class="error"
+    id="error">
 </div>
 
 </div>
 
+</div>
 
 
-<!-- ================================= -->
-<!-- 資料31528　未整理記録 -->
-<!-- ================================= -->
+
+<!-- ==================== -->
+<!-- 31528 未整理記録 -->
+<!-- ==================== -->
 
 <div class="record hidden" id="record31528">
 
@@ -380,9 +394,11 @@ placeholder="名前を入力"
 前日の夜間記録には、<br>
 
 雪乃と見られる人物が<br>
+
 何者かと話していたとの記録があった。<br><br>
 
 しかし、その記録は<br>
+
 後から訂正されている。
 
 </div>
@@ -393,6 +409,7 @@ placeholder="名前を入力"
 <strong>記録者注記</strong><br><br>
 
 「なぜ、あの夜の記録だけが<br>
+
 書き換えられたのか。」
 
 </div>
@@ -414,9 +431,9 @@ placeholder="名前を入力"
 
 
 
-<!-- ================================= -->
-<!-- 資料31529　回収品記録 -->
-<!-- ================================= -->
+<!-- ==================== -->
+<!-- 31529 回収品記録 -->
+<!-- ==================== -->
 
 <div class="record hidden" id="record31529">
 
@@ -436,7 +453,9 @@ placeholder="名前を入力"
 <strong>回収品</strong><br><br>
 
 衣装一式<br>
+
 私物数点<br>
+
 銀細工の髪飾り　一点
 
 </div>
@@ -451,30 +470,52 @@ placeholder="名前を入力"
 ただし、資料31525には<br>
 
 雪乃へ銀細工の髪飾りを<br>
+
 貸与した記録がある。
 
 </div>
 
 
+<!-- 知識問題 -->
+
 <div class="related">
 
-<strong>関連資料</strong><br><br>
+<strong>確認問題</strong><br><br>
 
-<a href="#" onclick="showRecord31530(); return false;">
+「銀の髪飾り」と記録されている<br>
 
-資料31530　春乃の私的記録
+この品について、<br>
 
-</a>
+芸妓が髪に身につける装飾品を<br>
 
+一般に何と呼ぶでしょうか。<br><br>
+
+
+<input
+    type="text"
+    id="kanzashiAnswer"
+    placeholder="答えを入力"
+>
+
+<button onclick="checkKanzashi()">
+確認
+</button>
+
+
+<div
+    class="error"
+    id="kanzashiError">
 </div>
 
 </div>
 
+</div>
 
 
-<!-- ================================= -->
-<!-- 資料31530　春乃の私的記録 -->
-<!-- ================================= -->
+
+<!-- ==================== -->
+<!-- 31530 春乃の私的記録 -->
+<!-- ==================== -->
 
 <div class="record hidden" id="record31530">
 
@@ -520,13 +561,14 @@ placeholder="名前を入力"
 
 
 
-<!-- ================================= -->
-<!-- 資料31531　最終資料 -->
-<!-- ================================= -->
+<!-- ==================== -->
+<!-- 31531 最終資料 -->
+<!-- ==================== -->
 
 <div class="record hidden" id="finalRecord">
 
 <div class="final">
+
 
 <h3>資料31531　未登録資料</h3>
 
@@ -534,7 +576,9 @@ placeholder="名前を入力"
 <div class="info">
 
 資料番号：31531<br>
+
 発見場所：不明<br>
+
 所有者：不明
 
 </div>
@@ -545,16 +589,57 @@ placeholder="名前を入力"
 
 <div class="related">
 
-<strong>銀細工の髪飾り</strong>
+<strong>銀細工の髪飾り</strong><br><br>
+
+この資料を最後に、<br>
+
+記録は途絶えている。<br><br><br>
+
+しかし、最後の記録には<br>
+
+奇妙な一文が残されている。
+
+</div>
+
+
+
+<!-- 教室への誘導 -->
+
+<div class="warning">
+
+<strong>
+「あれを、もう一度封じる必要がある。」
+</strong>
 
 <br><br>
 
-この資料を最後に、<br>
-記録は途絶えている。
+場所：<strong>教室の隅</strong>
 
-<br><br><br>
+</div>
 
+
+<br><br>
+
+
+<div class="related">
+
+<strong>記録者不明</strong><br><br>
+
+「お札を剥がしてはいけない。」<br><br>
+
+「一枚だけ、他とは違うものがある。」
+
+</div>
+
+
+<br><br>
+
+
+<div class="related">
+
+<strong>
 ――記録は、まだ終わっていない。
+</strong>
 
 </div>
 
@@ -565,11 +650,13 @@ placeholder="名前を入力"
 
 
 
-<!-- ================================= -->
+<!-- ==================== -->
 <!-- 通知 -->
-<!-- ================================= -->
+<!-- ==================== -->
 
-<div class="notice" id="notice">
+<div
+    class="notice"
+    id="notice">
 
 現在確認されている資料のみ表示しています。
 
@@ -583,154 +670,180 @@ placeholder="名前を入力"
 <script>
 
 
-/* ================================= */
-/* URLによる31525解放 */
-/* ================================= */
+/* =========================================
+   URLパラメータ
+========================================= */
 
 const params =
-new URLSearchParams(window.location.search);
+    new URLSearchParams(window.location.search);
 
 const watched =
-params.get("watched");
+    params.get("watched");
 
+
+
+/* =========================================
+   YouTube視聴後 → 31525
+========================================= */
 
 if (watched === "1") {
 
-document
-.getElementById("record31525")
-.classList
-.remove("hidden");
+    document
+        .getElementById("record31525")
+        .classList
+        .remove("hidden");
 
 
-document
-.getElementById("notice")
-.textContent =
-"追加資料が確認されました。資料31525を表示しています。";
+    document
+        .getElementById("notice")
+        .textContent =
+        "追加資料が確認されました。資料31525を表示しています。";
 
 }
 
 
 
-/* ================================= */
-/* 31526 */
-/* ================================= */
+/* =========================================
+   31526表示
+========================================= */
 
 function showRecord31526() {
 
-document
-.getElementById("record31526")
-.classList
-.remove("hidden");
+    document
+        .getElementById("record31526")
+        .classList
+        .remove("hidden");
 
 }
 
 
 
-/* ================================= */
-/* 31527 */
-/* ================================= */
+/* =========================================
+   31527表示
+========================================= */
 
 function showRecord31527() {
 
-document
-.getElementById("record31527")
-.classList
-.remove("hidden");
+    document
+        .getElementById("record31527")
+        .classList
+        .remove("hidden");
 
 }
 
 
 
-/* ================================= */
-/* 31527の回答 */
-/* ================================= */
+/* =========================================
+   春乃の名前を回答
+========================================= */
 
 function checkAnswer() {
 
-const answer =
-document
-.getElementById("answer")
-.value
-.trim();
+    const answer =
+        document
+        .getElementById("answer")
+        .value
+        .trim();
 
 
-if (answer === "春乃") {
+    if (answer === "春乃") {
 
-document
-.getElementById("record31528")
-.classList
-.remove("hidden");
-
-
-document
-.getElementById("error")
-.textContent = "";
+        document
+            .getElementById("record31528")
+            .classList
+            .remove("hidden");
 
 
-document
-.getElementById("notice")
-.textContent =
-"資料31528が確認されました。";
-
-} else {
-
-document
-.getElementById("error")
-.textContent =
-"記録と一致しません。資料をもう一度確認してください。";
-
-}
-
-}
+        document
+            .getElementById("error")
+            .textContent = "";
 
 
+        document
+            .getElementById("notice")
+            .textContent =
+            "資料31528が確認されました。";
 
-/* ================================= */
-/* 31529 */
-/* ================================= */
 
-function showRecord31529() {
+    } else {
 
-document
-.getElementById("record31529")
-.classList
-.remove("hidden");
+        document
+            .getElementById("error")
+            .textContent =
+            "記録と一致しません。資料をもう一度確認してください。";
+
+    }
 
 }
 
 
 
-/* ================================= */
-/* 31530 */
-/* ================================= */
+/* =========================================
+   31529 知識問題
+========================================= */
 
-function showRecord31530() {
+function checkKanzashi() {
 
-document
-.getElementById("record31530")
-.classList
-.remove("hidden");
+    const answer =
+        document
+        .getElementById("kanzashiAnswer")
+        .value
+        .trim();
+
+
+    if (
+        answer === "簪" ||
+        answer === "かんざし" ||
+        answer === "カンザシ"
+    ) {
+
+
+        document
+            .getElementById("record31530")
+            .classList
+            .remove("hidden");
+
+
+        document
+            .getElementById("kanzashiError")
+            .textContent = "";
+
+
+        document
+            .getElementById("notice")
+            .textContent =
+            "資料31530が確認されました。";
+
+
+    } else {
+
+        document
+            .getElementById("kanzashiError")
+            .textContent =
+            "記録と一致しません。";
+
+    }
 
 }
 
 
 
-/* ================================= */
-/* 最終資料 */
-/* ================================= */
+/* =========================================
+   31530 → 31531
+========================================= */
 
 function showFinal() {
 
-document
-.getElementById("finalRecord")
-.classList
-.remove("hidden");
+    document
+        .getElementById("finalRecord")
+        .classList
+        .remove("hidden");
 
 
-document
-.getElementById("notice")
-.textContent =
-"資料31531が確認されました。";
+    document
+        .getElementById("notice")
+        .textContent =
+        "資料31531が確認されました。";
 
 }
 
