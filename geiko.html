@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>芸妓資料保存室</title>
 
 <style>
+
 body {
     margin: 0;
     background: #eeeae2;
@@ -81,147 +83,682 @@ h2 {
     background: #e7e3da;
     color: #555;
 }
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    max-width: 70%;
+}
+
+button {
+    padding: 10px 18px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: #8b0000;
+    margin-top: 10px;
+}
+
+.final {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.final h3 {
+    font-size: 28px;
+    letter-spacing: .1em;
+}
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
-<header>
-    <h1>芸妓資料保存室</h1>
 
-    <div class="subtitle">
-        昭和期の芸妓に関する記録を整理・保存しています。
-    </div>
+<header>
+
+<h1>芸妓資料保存室</h1>
+
+<div class="subtitle">
+昭和期の芸妓に関する記録を整理・保存しています。
+</div>
+
 </header>
 
 
 <h2>資料一覧</h2>
 
 
+<!-- ========================= -->
 <!-- 資料31523 -->
-<div class="record">
-    <h3>資料31523　春乃</h3>
+<!-- ========================= -->
 
-    <div class="info">
-        氏名：春乃<br>
-        年齢：20<br>
-        所属：○○置屋<br>
-        最終確認：昭和十二年五月十三日
-    </div>
+<div class="record">
+
+<h3>資料31523　春乃</h3>
+
+<div class="info">
+
+氏名：春乃<br>
+年齢：20<br>
+所属：○○置屋<br>
+最終確認：昭和十二年五月十三日
+
+</div>
+
 </div>
 
 
+
+<!-- ========================= -->
 <!-- 資料31524 -->
-<div class="record">
-    <h3>資料31524　欠番</h3>
+<!-- ========================= -->
 
-    <div class="info">
-        当該資料は現在確認されていません。
-    </div>
+<div class="record">
+
+<h3>資料31524　欠番</h3>
+
+<div class="info">
+
+当該資料は現在確認されていません。
+
+</div>
+
 </div>
 
 
+
+<!-- ========================= -->
 <!-- 資料31525 -->
-<div class="record">
-    <h3>資料31525　千代菊</h3>
+<!-- ========================= -->
 
-    <div class="info">
-        氏名：千代菊<br>
-        年齢：21<br>
-        所属：○○置屋<br>
-        記録確認：昭和十二年五月十三日
-    </div>
+<div class="record">
+
+<h3>資料31525　千代菊</h3>
+
+<div class="info">
+
+氏名：千代菊<br>
+年齢：21<br>
+所属：○○置屋<br>
+記録確認：昭和十二年五月十三日
+
+</div>
+
 </div>
 
 
+
+<!-- ========================= -->
 <!-- 資料31526 -->
+<!-- ========================= -->
+
 <div class="record hidden" id="record31526">
 
-    <h3>資料31526　雪乃</h3>
+<h3>資料31526　雪乃</h3>
 
-    <div class="info">
-        氏名：雪乃<br>
-        年齢：19<br>
-        所属：○○置屋<br>
-        初回記録：昭和十二年五月十二日<br>
-        備考：本人確認済み。
-    </div>
+<div class="info">
 
-    <div class="related">
-        <strong>関連記録</strong><br><br>
-
-        昭和十二年五月十二日<br>
-        雪乃へ衣装一式を貸与。<br>
-        銀細工の髪飾り一点。<br><br>
-
-        備考：<br>
-        「以前の使用者の名前を記録しないよう本人から申し出あり。」
-    </div>
-
-    <!-- 31527を開くリンク -->
-    <div class="related">
-        <strong>関連資料</strong><br><br>
-
-        <a href="#" onclick="showRecord31527(); return false;">
-            資料31527　五月十三日 夜間記録
-        </a>
-    </div>
+氏名：雪乃<br>
+年齢：19<br>
+所属：○○置屋<br>
+初回記録：昭和十二年五月十二日<br>
+最終確認：昭和十二年五月十三日
 
 </div>
 
 
+<div class="related">
+
+<strong>関連記録</strong><br><br>
+
+昭和十二年五月十二日<br>
+
+雪乃へ衣装一式を貸与。<br>
+銀細工の髪飾り一点。<br><br>
+
+備考：<br>
+
+「以前の使用者の名前を記録しないよう本人から申し出あり。」
+
+</div>
+
+
+<div class="related">
+
+<strong>関連資料</strong><br><br>
+
+<a href="#" onclick="showRecord31527(); return false;">
+
+資料31527　五月十三日 夜間記録
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================= -->
 <!-- 資料31527 -->
+<!-- ========================= -->
+
 <div class="record hidden" id="record31527">
 
-    <h3>資料31527　五月十三日 夜間記録</h3>
+<h3>資料31527　五月十三日 夜間記録</h3>
 
-    <div class="info">
-        昭和十二年五月十三日<br><br>
+<div class="info">
 
-        夜間、○○置屋付近にて人影を確認。<br>
-        詳細については記録なし。
-    </div>
+昭和十二年五月十三日<br><br>
 
-    <div class="related">
-        <strong>備考</strong><br><br>
+午後十一時頃。<br><br>
 
-        関係者への聞き取りを行ったが、<br>
-        内容に食い違いあり。
-    </div>
+○○置屋付近にて人影を確認。<br><br>
+
+二人いたように見えたが、<br>
+暗く、顔までは確認できず。
 
 </div>
 
+
+<div class="related">
+
+<strong>記録者</strong><br><br>
+
+千代菊
+
+</div>
+
+
+<div class="related">
+
+<strong>追記</strong><br><br>
+
+この記録について、翌日になって<br>
+一部を書き直すよう指示があった。<br><br>
+
+元の記録は残されていない。
+
+</div>
+
+
+<div class="related">
+
+<strong>関連資料</strong><br><br>
+
+<a href="#" onclick="showRecord31528(); return false;">
+
+資料31528　記録訂正に関するメモ
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- 資料31528 -->
+<!-- ========================= -->
+
+<div class="record hidden" id="record31528">
+
+<h3>資料31528　記録訂正に関するメモ</h3>
+
+<div class="info">
+
+昭和十二年五月十四日<br><br>
+
+前日の夜間記録について訂正。<br><br>
+
+「二人」という記述を削除。<br><br>
+
+記録者：千代菊<br><br>
+
+訂正を指示した人物：＿＿＿＿
+
+</div>
+
+
+<div class="related">
+
+<strong>備考</strong><br><br>
+
+指示した人物について、記録には残されていない。<br><br>
+
+ただし、当日の記録によれば、<br>
+
+その人物は五月十三日の夜に<br>
+置屋にいたことになっている。
+
+</div>
+
+
+<div class="related">
+
+<strong>確認</strong><br><br>
+
+その人物の名前を入力してください。<br><br>
+
+
+<input
+type="text"
+id="answer"
+placeholder="名前を入力"
+>
+
+
+<button onclick="checkAnswer()">
+
+確認
+
+</button>
+
+
+<div class="error" id="error"></div>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- 資料31529 -->
+<!-- ========================= -->
+
+<div class="record hidden" id="record31529">
+
+<h3>資料31529　未整理記録</h3>
+
+
+<div class="info">
+
+昭和十二年五月十四日<br><br>
+
+雪乃の所在について確認。<br>
+
+本人の姿は確認できず。
+
+<br><br>
+
+前日の夜間記録には、<br>
+
+雪乃と見られる人物が<br>
+何者かと話していたとの記録があった。
+
+<br><br>
+
+しかし、その記録は<br>
+後から訂正されている。
+
+</div>
+
+
+<div class="related">
+
+<strong>記録者注記</strong><br><br>
+
+「なぜ、あの夜の記録だけが<br>
+書き換えられたのか。」
+
+</div>
+
+
+<div class="related">
+
+<strong>関連資料</strong><br><br>
+
+<a href="#" onclick="showRecord31530(); return false;">
+
+資料31530　回収品記録
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- 資料31530 -->
+<!-- ========================= -->
+
+<div class="record hidden" id="record31530">
+
+<h3>資料31530　回収品記録</h3>
+
+
+<div class="info">
+
+昭和十二年五月十四日<br><br>
+
+○○置屋より回収。
+
+</div>
+
+
+<div class="related">
+
+<strong>回収品</strong><br><br>
+
+衣装一式<br>
+私物数点<br>
+銀細工の髪飾り　一点
+
+</div>
+
+
+<div class="related">
+
+<strong>備考</strong><br><br>
+
+髪飾りの持ち主について記録なし。<br><br>
+
+ただし、資料31526には<br>
+
+雪乃へ銀細工の髪飾りを<br>
+貸与した記録がある。
+
+</div>
+
+
+<div class="related">
+
+<strong>関連資料</strong><br><br>
+
+<a href="#" onclick="showRecord31531(); return false;">
+
+資料31531　春乃の私的記録
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- 資料31531 -->
+<!-- ========================= -->
+
+<div class="record hidden" id="record31531">
+
+<h3>資料31531　春乃の私的記録</h3>
+
+
+<div class="info">
+
+日付不明
+
+</div>
+
+
+<div class="related">
+
+あの日のことを、誰にも話してはいけない。<br><br>
+
+記録も消した。<br><br>
+
+これで、もう終わったはずだった。<br><br>
+
+なのに――<br><br>
+
+あの髪飾りだけは、どうしても捨てられなかった。<br><br>
+
+雪乃が、まだそこにいるような気がする。
+
+</div>
+
+
+<div class="related">
+
+<strong>最後の記録</strong><br><br>
+
+<a href="#" onclick="showFinal(); return false;">
+
+未登録資料を確認する
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- 最終資料 -->
+<!-- ========================= -->
+
+<div class="record hidden" id="finalRecord">
+
+<div class="final">
+
+<h3>未登録資料</h3>
+
+
+<div class="info">
+
+資料番号：不明<br>
+発見場所：不明<br>
+所有者：不明
+
+</div>
+
+
+<br>
+
+
+<div class="related">
+
+<strong>銀細工の髪飾り</strong>
+
+<br><br>
+
+この資料を最後に、<br>
+記録は途絶えている。
+
+<br><br><br>
+
+――記録は、まだ終わっていない。
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- 下部通知 -->
+<!-- ========================= -->
 
 <div class="notice" id="notice">
-    現在確認されている資料のみ表示しています。
-</div>
+
+現在確認されている資料のみ表示しています。
 
 </div>
+
+
+</div>
+
 
 
 <script>
 
-const params = new URLSearchParams(window.location.search);
-const watched = params.get("watched");
+
+/* ========================= */
+/* URLによる31526解放 */
+/* ========================= */
+
+const params =
+new URLSearchParams(window.location.search);
+
+const watched =
+params.get("watched");
+
 
 if (watched === "1") {
 
-    document.getElementById("record31526").classList.remove("hidden");
+document
+.getElementById("record31526")
+.classList
+.remove("hidden");
 
-    document.getElementById("notice").textContent =
-        "追加資料が確認されました。資料31526を表示しています。";
+
+document
+.getElementById("notice")
+.textContent =
+"追加資料が確認されました。資料31526を表示しています。";
+
 }
 
 
+
+/* ========================= */
+/* 31527 */
+/* ========================= */
+
 function showRecord31527() {
 
-    document.getElementById("record31527").classList.remove("hidden");
+document
+.getElementById("record31527")
+.classList
+.remove("hidden");
+
+}
+
+
+
+/* ========================= */
+/* 31528 */
+/* ========================= */
+
+function showRecord31528() {
+
+document
+.getElementById("record31528")
+.classList
+.remove("hidden");
+
+}
+
+
+
+/* ========================= */
+/* 31528 回答 */
+/* ========================= */
+
+function checkAnswer() {
+
+
+const answer =
+document
+.getElementById("answer")
+.value
+.trim();
+
+
+if (answer === "春乃") {
+
+
+document
+.getElementById("record31529")
+.classList
+.remove("hidden");
+
+
+document
+.getElementById("error")
+.textContent = "";
+
+
+document
+.getElementById("notice")
+.textContent =
+"資料31529が確認されました。";
+
+
+} else {
+
+
+document
+.getElementById("error")
+.textContent =
+"記録と一致しません。資料をもう一度確認してください。";
+
+
+}
+
+}
+
+
+
+/* ========================= */
+/* 31530 */
+/* ========================= */
+
+function showRecord31530() {
+
+document
+.getElementById("record31530")
+.classList
+.remove("hidden");
+
+}
+
+
+
+/* ========================= */
+/* 31531 */
+/* ========================= */
+
+function showRecord31531() {
+
+document
+.getElementById("record31531")
+.classList
+.remove("hidden");
+
+}
+
+
+
+/* ========================= */
+/* 最終資料 */
+/* ========================= */
+
+function showFinal() {
+
+document
+.getElementById("finalRecord")
+.classList
+.remove("hidden");
+
+
+document
+.getElementById("notice")
+.textContent =
+"未登録資料が確認されました。";
+
 
 }
 
 </script>
+
 
 </body>
 </html>
