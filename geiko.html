@@ -1,27 +1,175 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>芸妓資料保存室</title>
+
+<style>
+body {
+    margin: 0;
+    background: #eeeae2;
+    color: #292724;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+header {
+    border-bottom: 3px double #555;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: .15em;
+    margin: 0;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #666;
+}
+
+h2 {
+    margin-top: 35px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+}
+
+.record {
+    background: #f8f6f0;
+    border: 1px solid #aaa;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.record h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.info {
+    line-height: 2;
+}
+
+.related {
+    margin-top: 20px;
+    border-top: 1px solid #aaa;
+    padding-top: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.notice {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #aaa;
+    background: #e7e3da;
+    color: #555;
+}
+</style>
 </head>
 
 <body>
 
-<h1>芸妓資料保存室</h1>
+<div class="container">
 
-<p>昭和期の芸妓に関する記録を整理・保存しています。</p>
-
-<hr>
+<header>
+    <h1>芸妓資料保存室</h1>
+    <div class="subtitle">
+        昭和期の芸妓に関する記録を整理・保存しています。
+    </div>
+</header>
 
 <h2>資料一覧</h2>
 
-<p>資料31523　春乃</p>
+<!-- 資料31523 -->
+<div class="record">
+    <h3>資料31523　春乃</h3>
 
-<p>資料31524　欠番</p>
+    <div class="info">
+        氏名：春乃<br>
+        年齢：記録なし<br>
+        所属：○○置屋<br>
+        記録確認：昭和十二年五月十一日
+    </div>
+</div>
 
-<p>資料31525　千代菊</p>
+<!-- 資料31524 -->
+<div class="record">
+    <h3>資料31524　欠番</h3>
+
+    <div class="info">
+        当該資料は現在確認されていません。
+    </div>
+</div>
+
+<!-- 資料31525 -->
+<div class="record">
+    <h3>資料31525　千代菊</h3>
+
+    <div class="info">
+        氏名：千代菊<br>
+        年齢：21<br>
+        所属：○○置屋<br>
+        記録確認：昭和十二年五月十三日
+    </div>
+</div>
+
+<!-- 資料31526 -->
+<div class="record hidden" id="record31526">
+
+    <h3>資料31526　雪乃</h3>
+
+    <div class="info">
+        氏名：雪乃<br>
+        年齢：19<br>
+        所属：○○置屋<br>
+        初回記録：昭和十二年五月十二日<br>
+        備考：本人確認済み。
+    </div>
+
+    <div class="related">
+        <strong>関連記録</strong><br><br>
+
+        昭和十二年五月十二日<br>
+        雪乃へ衣装一式を貸与。<br>
+        銀細工の髪飾り一点。<br><br>
+
+        備考：<br>
+        「以前の使用者の名前を記録しないよう本人から申し出あり。」
+    </div>
+
+</div>
+
+<div class="notice" id="notice">
+    現在確認されている資料のみ表示しています。
+</div>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const watched = params.get("watched");
+
+if (watched === "1") {
+
+    document.getElementById("record31526").classList.remove("hidden");
+
+    document.getElementById("notice").textContent =
+        "追加資料が確認されました。資料31526を表示しています。";
+}
+
+</script>
 
 </body>
-
 </html>
